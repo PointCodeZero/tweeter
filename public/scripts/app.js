@@ -79,14 +79,28 @@ $(document).ready(function() {
       $form.on('submit', function(event) {
         event.preventDefault();
         let strData = $(this).serialize();
-        $.ajax('index.html', { data: strData }, { method: 'POST' })
-        .then(function(queryString) {
-          console.log('This is the result: ', queryString);
-        })
+        if (strData.length <= 5) {
+          return alert("Please add a tweet!");
+        }
+        if (strData.length > 145) {
+          return alert("Please short your message, only 140 characters allowed!");
+        }
+        $.ajax('/tweets', { data: strData, method: 'POST' })
+          .then(function(queryString) {
+            console.log('This is the result: ', queryString);
+          });
       });
   }
 
-  renderTweets(data);
+  function loadTweets() {
+    $.ajax('/tweets', { method: 'GET'})
+    .then(function(tweet) {
+      renderTweets(tweet);
+    });
+  }
+
+  loadTweets();
+  // renderTweets(data);
   ajaxPOST();
 
 });
