@@ -47,10 +47,11 @@ const data = [
 
 $(document).ready(function() {
 
-  function renderTweets(tweets) {
-    tweets.forEach((tweet) => {
-      createTweetElement(tweet);
-    });
+  //Sanitizer
+  function escape(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   }
 
   function createTweetElement(db) {
@@ -62,7 +63,7 @@ $(document).ready(function() {
             <span class="email-hint">${db.user.handle}</span>
           </header>
           <div class="main-tweet">
-            <p>${db.content.text}</p>
+            <p>${escape(db.content.text)})</p>
           </div>
           <footer>
             <p>${db.created_at} days</p>
@@ -72,6 +73,19 @@ $(document).ready(function() {
           </footer>
         </article>
     `);
+  }
+
+  function renderTweets(tweets) {
+    tweets.forEach((tweet) => {
+      createTweetElement(tweet);
+    });
+  }
+
+  function loadTweets() {
+    $.ajax('/tweets', { method: 'GET'})
+    .then(function(tweet) {
+      renderTweets(tweet);
+    });
   }
 
   function ajaxPOST() {
@@ -92,15 +106,6 @@ $(document).ready(function() {
       });
   }
 
-  function loadTweets() {
-    $.ajax('/tweets', { method: 'GET'})
-    .then(function(tweet) {
-      renderTweets(tweet);
-    });
-  }
-
-
-  // renderTweets(data);
   ajaxPOST();
 
 });
