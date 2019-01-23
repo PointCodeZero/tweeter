@@ -108,4 +108,8 @@ $(document).ready(function() {
 
   ajaxPOST();
 
+  $('#nav-bar .btn').on('click', function() {
+    $('.new-tweet').slideToggle(400, function() {});
+  });
+
 });
