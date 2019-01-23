@@ -74,6 +74,19 @@ $(document).ready(function() {
     `);
   }
 
+  function ajaxPOST () {
+    let $form = $('.container form');
+      $form.on('submit', function(event) {
+        event.preventDefault();
+        let strData = $(this).serialize();
+        $.ajax('index.html', { data: strData }, { method: 'POST' })
+        .then(function(queryString) {
+          console.log('This is the result: ', queryString);
+        })
+      });
+  }
+
   renderTweets(data);
+  ajaxPOST();
 
 });
