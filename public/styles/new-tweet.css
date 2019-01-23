@@ -3,6 +3,7 @@
   margin: 0 2em;
   border-radius: 0.5em;
   border: solid 1px #8c8c8c;
+  display: none;
 }
 
 .new-tweet h2 {

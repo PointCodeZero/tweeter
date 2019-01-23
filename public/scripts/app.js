@@ -55,7 +55,7 @@ $(document).ready(function() {
   }
 
   function createTweetElement(db) {
-    $('#tweets-container').append(`
+    $('#tweets-container').prepend(`
         <article class="tweet">
           <header>
             <img src="${db.user.avatars.small}">
@@ -108,8 +108,12 @@ $(document).ready(function() {
 
   ajaxPOST();
 
+  //Form Animation
   $('#nav-bar .btn').on('click', function() {
-    $('.new-tweet').slideToggle(400, function() {});
+    $('.new-tweet').slideToggle(400, function() {
+      $('.container form textarea').select();
+    });
+
   });
 
 });
