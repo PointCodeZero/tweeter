@@ -2,6 +2,7 @@
   background-color: #eee;
   margin: 0 2em;
   border-radius: 0.5em;
+  border: solid 1px #8c8c8c;
 }
 
 .new-tweet h2 {
@@ -32,4 +33,52 @@ form input {
 
 form {
   padding-bottom: 0.8em;
+}
+
+#tweets {
+  background-color: #eee;
+  margin: 1em 2em;
+  border-radius: 0.5em;
+  border: solid 1px #8c8c8c;
+  opacity: 0.8;
+}
+
+#tweets:hover {
+  opacity: 1;
+}
+
+#tweets header {
+  height: 4.5em;
+  padding: 0.3em 0.6em;
+}
+
+#tweets header h2 {
+  display: inline;
+  margin-left: 0.5em;
+}
+
+#tweets header .email-hint {
+  float: right;;
+  padding-top: 10px;
+}
+
+#tweets footer {
+  padding: 0.5em 0.6em;
+  font-size: 0.8em;
+  background-color: #fff;
+  border-top: solid 1px #e6e6e6;
+}
+
+#tweets footer p {
+  display: inline;
+}
+
+#tweets footer i {
+  float: right;
+  margin: 0 0.3em;
+}
+
+#tweets .main-tweet {
+  padding: 2.4em 0.4em;
+  background-color: #fff;
 }
