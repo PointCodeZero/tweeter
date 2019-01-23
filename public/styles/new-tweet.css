@@ -36,6 +36,38 @@ form {
   padding-bottom: 0.8em;
 }
 
+/*ERROR STYLES*/
+#errorNoChar {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+  height: 3em;
+  width: 95%;
+  margin: 1em auto 0 auto;
+  font-size: small;
+  text-align: center;
+  padding: 0.85em 0.25em;
+  border: dotted #a94442 1px;
+  border-radius: 0.5em;
+  display: none;
+}
+
+#errorMoreChar {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+  height: 3em;
+  width: 95%;
+  margin: 1em auto 0 auto;
+  font-size: small;
+  text-align: center;
+  padding: 0.85em 0.25em;
+  border: dotted #a94442 1px;
+  border-radius: 0.5em;
+  display: none;
+}
+
+/*FORM STYLES*/
 #tweets-container:hover {
   opacity: 1;
 }

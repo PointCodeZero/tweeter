@@ -90,15 +90,19 @@ $(document).ready(function() {
   }
 
   function ajaxPOST() {
-    let $form = $('.container form');
+    const $form = $('.container form');
+    const $error1 = $('#errorNoChar');
+    const $error2 = $('#errorMoreChar');
       $form.on('submit', function(event) {
+        $error1.hide();
+        $error2.hide();
         event.preventDefault();
         let strData = $(this).serialize();
         if (strData.length <= 5) {
-          return alert("Please add a tweet!");
+          return $error1.slideToggle(400);
         }
         if (strData.length > 145) {
-          return alert("Please short your message, only 140 characters allowed!");
+          return $error2.slideToggle(400);
         }
         $.ajax('/tweets', { data: strData, method: 'POST' })
           .then(function() {
