@@ -63,7 +63,7 @@ $(document).ready(function() {
             <span class="email-hint">${db.user.handle}</span>
           </header>
           <div class="main-tweet">
-            <p>${escape(db.content.text)})</p>
+            <p>${escape(db.content.text)}</p>
           </div>
           <footer>
             <p>${db.created_at} days</p>
@@ -106,6 +106,7 @@ $(document).ready(function() {
       });
   }
 
+  loadTweets();
   ajaxPOST();
 
   //Form Animation
