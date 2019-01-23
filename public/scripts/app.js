@@ -74,7 +74,7 @@ $(document).ready(function() {
     `);
   }
 
-  function ajaxPOST () {
+  function ajaxPOST() {
     let $form = $('.container form');
       $form.on('submit', function(event) {
         event.preventDefault();
@@ -86,8 +86,8 @@ $(document).ready(function() {
           return alert("Please short your message, only 140 characters allowed!");
         }
         $.ajax('/tweets', { data: strData, method: 'POST' })
-          .then(function(queryString) {
-            console.log('This is the result: ', queryString);
+          .then(function() {
+            loadTweets();
           });
       });
   }
@@ -99,7 +99,7 @@ $(document).ready(function() {
     });
   }
 
-  loadTweets();
+
   // renderTweets(data);
   ajaxPOST();
 
