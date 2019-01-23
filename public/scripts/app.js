@@ -82,6 +82,7 @@ $(document).ready(function() {
   }
 
   function loadTweets() {
+    $('#tweets-container').empty();
     $.ajax('/tweets', { method: 'GET'})
     .then(function(tweet) {
       renderTweets(tweet);
@@ -102,6 +103,7 @@ $(document).ready(function() {
         $.ajax('/tweets', { data: strData, method: 'POST' })
           .then(function() {
             loadTweets();
+            $('.new-tweet textarea').val('');
           });
       });
   }
