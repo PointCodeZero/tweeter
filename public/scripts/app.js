@@ -73,7 +73,15 @@ $(document).ready(function() {
     $('.new-tweet').slideToggle(400, function() {
       $('.container form textarea').select();
     });
-
   });
+
+  //Footer Icons Animation
+  $('#tweets-container').on('mouseenter', function() {
+    $('#tweets-container footer i').toggle();
+  });
+  $('#tweets-container').on('mouseleave', function() {
+    $('#tweets-container footer i').toggle();
+  });
+
 
 });

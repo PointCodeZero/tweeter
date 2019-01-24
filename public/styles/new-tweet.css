@@ -68,7 +68,15 @@ form {
 }
 
 /*FORM STYLES*/
-#tweets-container:hover {
+#tweets-container .tweet {
+  background-color: #eee;
+  margin: 1em 2em;
+  border-radius: 0.5em;
+  border: solid 1px #8c8c8c;
+  opacity: 0.8;
+}
+
+#tweets-container .tweet:hover {
   opacity: 1;
 }
 
@@ -101,6 +109,7 @@ form {
 #tweets-container footer i {
   float: right;
   margin: 0 0.3em;
+  display: none;
 }
 
 #tweets-container .main-tweet {
@@ -109,10 +118,3 @@ form {
   word-break: break-all;
 }
 
-#tweets-container .tweet {
-  background-color: #eee;
-  margin: 1em 2em;
-  border-radius: 0.5em;
-  border: solid 1px #8c8c8c;
-  opacity: 0.8;
-}
