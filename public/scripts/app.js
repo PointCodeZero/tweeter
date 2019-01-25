@@ -26,7 +26,7 @@ $(document).ready(function() {
     return Math.floor(seconds) + " seconds";
   }
 
-  //Sanitizer
+  //Sanitizer for textarea
   function escape(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -55,12 +55,14 @@ $(document).ready(function() {
     `);
   }
 
+  //For each tweet in DB create HTML
   function renderTweets(tweets) {
     tweets.forEach((tweet) => {
       createTweetElement(tweet);
     });
   }
 
+  //Load all created tweets on page
   function loadTweets() {
     $('#tweets-container').empty();
     $.ajax('/tweets', { method: 'GET'})
@@ -69,6 +71,7 @@ $(document).ready(function() {
     });
   }
 
+  //AJAX post new tweet
   function ajaxPOST() {
     const $form = $('.container form');
     const $error1 = $('#errorNoChar');
@@ -92,6 +95,7 @@ $(document).ready(function() {
       });
   }
 
+  //Setup page
   loadTweets();
   ajaxPOST();
 
@@ -103,12 +107,10 @@ $(document).ready(function() {
   });
 
   //Footer Icons Animation
-  $('#tweets-container').on('mouseenter', function() {
-    $('#tweets-container footer i').toggle();
-  });
-  $('#tweets-container').on('mouseleave', function() {
-    $('#tweets-container footer i').toggle();
-  });
-
-
+  // $('#tweets-container').on('mouseenter', function() {
+  //   $('#tweets-container footer i').toggle();
+  // })
+  // .on('mouseleave', function() {
+  //   $('#tweets-container footer i').toggle();
+  // });
 });

@@ -1,3 +1,4 @@
+/*FORM STYLES*/
 .new-tweet {
   background-color: #eee;
   margin: 0 2em;
@@ -36,6 +37,67 @@ form {
   padding-bottom: 0.8em;
 }
 
+#tweets-container .tweet {
+  background-color: #eee;
+  margin: 1em 2em;
+  border-radius: 0.5em;
+  border: solid 1px #8c8c8c;
+  opacity: 0.8;
+}
+
+#tweets-container .tweet:hover {
+  opacity: 1;
+}
+
+#tweets-container header {
+  height: 4.5em;
+  padding: 0.3em 0.6em;
+}
+
+#tweets-container header h2 {
+  display: inline;
+  margin-left: 0.5em;
+}
+
+#tweets-container header .email-hint {
+  float: right;;
+  padding-top: 10px;
+}
+
+#tweets-container img {
+  border-radius: 0.5em;
+}
+
+#tweets-container footer {
+  padding: 0.5em 0.6em;
+  font-size: 0.8em;
+  background-color: #fff;
+  border-top: solid 1px #e6e6e6;
+}
+
+#tweets-container footer p {
+  display: inline;
+}
+
+
+
+#tweets-container footer i {
+  float: right;
+  margin: 0 0.3em;
+  color: #00a087;
+  opacity: 0;
+}
+
+#tweets-container .tweet:hover i {
+  opacity: 1;
+}
+
+#tweets-container .main-tweet {
+  padding: 2.4em 0.4em;
+  background-color: #fff;
+  word-break: break-all;
+}
+
 /*ERROR STYLES*/
 #errorNoChar {
   background-color: #f2dede;
@@ -65,56 +127,5 @@ form {
   border: dotted #a94442 1px;
   border-radius: 0.5em;
   display: none;
-}
-
-/*FORM STYLES*/
-#tweets-container .tweet {
-  background-color: #eee;
-  margin: 1em 2em;
-  border-radius: 0.5em;
-  border: solid 1px #8c8c8c;
-  opacity: 0.8;
-}
-
-#tweets-container .tweet:hover {
-  opacity: 1;
-}
-
-#tweets-container header {
-  height: 4.5em;
-  padding: 0.3em 0.6em;
-}
-
-#tweets-container header h2 {
-  display: inline;
-  margin-left: 0.5em;
-}
-
-#tweets-container header .email-hint {
-  float: right;;
-  padding-top: 10px;
-}
-
-#tweets-container footer {
-  padding: 0.5em 0.6em;
-  font-size: 0.8em;
-  background-color: #fff;
-  border-top: solid 1px #e6e6e6;
-}
-
-#tweets-container footer p {
-  display: inline;
-}
-
-#tweets-container footer i {
-  float: right;
-  margin: 0 0.3em;
-  display: none;
-}
-
-#tweets-container .main-tweet {
-  padding: 2.4em 0.4em;
-  background-color: #fff;
-  word-break: break-all;
 }
 
