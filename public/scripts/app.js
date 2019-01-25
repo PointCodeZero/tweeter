@@ -34,7 +34,7 @@ $(document).ready(function() {
   }
 
   function createTweetElement(db) {
-    let formatedDate = timeSince(`${db.created_at}`);
+    let formatedDate = timeSince(db.created_at);
     $('#tweets-container').prepend(`
         <article class="tweet">
           <header>
