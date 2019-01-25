@@ -10,6 +10,10 @@ Users will be able to create new tweets with a maximum of 140 characters. Tweets
 
 ## Images
 
+!["Screenshot of form"](https://github.com/PointCodeZero/tweeter/blob/master/docs/form.jpg?raw=true)
+!["Screenshot of tweets hover"](https://github.com/PointCodeZero/tweeter/blob/master/docs/hover.jpg?raw=true)
+!["Screenshot of form error"](https://github.com/PointCodeZero/tweeter/blob/master/docs/error.jpg?raw=true)
+
 ## Dependencies
 
 - MongoDB
