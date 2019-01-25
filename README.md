@@ -6,7 +6,7 @@ A simple sigle-page AJAX-based Twitter clone build with front-end HTML5 & CSS, J
 
 ## Functionality
 
-Users will be able to create new tweets
+Users will be able to create new tweets with a maximum of 140 characters. Tweets will be displayed on the top of the page by chronological order.
 
 ## Images
 
@@ -18,7 +18,6 @@ Users will be able to create new tweets
 - body-parser
 - chance
 - md5
-
 
 ## Getting Started
 
