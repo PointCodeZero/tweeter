@@ -114,18 +114,18 @@ function loadTweets() {
 //AJAX post new tweet
 function ajaxPOST() {
   const $form = $('.container form');
-  const $error1 = $('#errorNoChar');
-  const $error2 = $('#errorMoreChar');
+  const $errorNoChar = $('#errorNoChar');
+  const $errorMoreChar = $('#errorMoreChar');
     $form.on('submit', function(event) {
-      $error1.hide();
-      $error2.hide();
+      $errorNoChar.hide();
+      $errorMoreChar.hide();
       event.preventDefault();
       let strData = $(this).serialize();
       if (strData.length <= 5) {
-        return $error1.slideToggle(400);
+        return $errorNoChar.slideToggle(400);
       }
       if (strData.length > 145) {
-        return $error2.slideToggle(400);
+        return $errorMoreChar.slideToggle(400);
       }
       $.ajax('/tweets', { data: strData, method: 'POST' })
         .then(function() {
