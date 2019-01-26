@@ -84,6 +84,11 @@ form {
   margin: 0 0.3em;
   color: #00a087;
   opacity: 0;
+  z-index: 2;
+}
+
+#tweets-container footer i:hover {
+  color: #e0245e;
 }
 
 #tweets-container .tweet:hover i {

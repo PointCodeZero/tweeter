@@ -1,0 +1,11 @@
+.like {
+  margin: 0 1.2em;
+}
+
+.like:hover {
+  color: #e0245e;
+}
+
+#recycle {
+ margin: 0 1em;
+}
