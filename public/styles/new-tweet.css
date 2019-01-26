@@ -15,7 +15,7 @@
 }
 
 .counter {
-  margin-left: 77%;
+  margin-left: 73%;
   margin-right: 2.5%;
   font-size: 0.7em;
   padding-top: 0.52em;
@@ -99,6 +99,16 @@ form {
   padding: 2.4em 0.4em;
   background-color: #fff;
   word-break: break-all;
+}
+
+/*BUTTON FORM*/
+.new-tweet form input {
+  margin-top: 0.3em;
+  padding: 0.3em;
+  color: #00a087;
+  background-color: #e6ffff;
+  border: solid 1px black;
+  border-radius: 0.5em;
 }
 
 /*ERROR STYLES*/
