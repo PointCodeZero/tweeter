@@ -14,7 +14,7 @@ $(document).ready(function() {
 //Like Button
 function likeHandlers(tweets) {
   $('#tweets-container footer i.fa-heart').on('click', function() {
-    let tweetID = $(this).attr("id");
+    let tweetID = $(this).attr('id');
     $.ajax(`/tweets/${tweetID}/like`, { method: 'POST' })
       .then(function(tweet) {
         $(`#${tweet._id} .like`).text(tweet.likes + 1);
@@ -44,14 +44,14 @@ function timeSince(date) {
       } else {
         interval = Math.floor(seconds / 3600);
         if (interval >= 1) {
-          intervalType = "hour";
+          intervalType = 'hour';
         } else {
           interval = Math.floor(seconds / 60);
           if (interval >= 1) {
-            intervalType = "minute";
+            intervalType = 'minute';
           } else {
             interval = seconds;
-            intervalType = "second";
+            intervalType = 'second';
           }
         }
       }
