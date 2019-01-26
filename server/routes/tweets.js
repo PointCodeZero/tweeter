@@ -43,16 +43,13 @@ module.exports = function(DataHelpers) {
   });
 
   tweetsRoutes.post("/:id/like", function(req, res) {
-
     DataHelpers.updateLikes(req.params.id, (err, tweet) => {
       if (err) {
         return res.status(400).json({ error: err.message });
       }
-      console.log(tweet.value)
       res.json(tweet.value);
     });
   });
 
   return tweetsRoutes;
-
 }
