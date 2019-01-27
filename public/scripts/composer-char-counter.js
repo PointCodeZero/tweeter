@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   const maxLength = 140;
 
-  $('form textarea').on('keyup', function() {
+  $('form textarea').on('keypress', function() {
     let currentLength = $(this).val().length;
     let formLength = maxLength - currentLength;
     let counter = $(this).siblings('.counter').text(formLength);
