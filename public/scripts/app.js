@@ -27,7 +27,7 @@ function timeSince(date) {
   if (typeof date !== 'object') {
     date = new Date(date);
   }
-  let seconds = Math.floor((new Date() - date) / 1000 + 1);
+  const seconds = Math.floor((new Date() - date) / 1000 + 1);
   let intervalType;
   let interval = Math.floor(seconds / 3153600);
 
@@ -120,7 +120,7 @@ function ajaxPOST() {
       $errorNoChar.hide(); // .hide() is roughly equivalent to css display: none except that jQuery stores data to be restored to it's initial value
       $errorMoreChar.hide();
       event.preventDefault();
-      let strData = $(this).serialize();
+      const strData = $(this).serialize();
       if (strData.length <= 5) {
         return $errorNoChar.slideToggle(400);
       }
