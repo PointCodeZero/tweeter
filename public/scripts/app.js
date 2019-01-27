@@ -117,7 +117,7 @@ function ajaxPOST() {
   const $errorNoChar = $('#errorNoChar');
   const $errorMoreChar = $('#errorMoreChar');
     $form.on('submit', function(event) {
-      $errorNoChar.hide();
+      $errorNoChar.hide(); // .hide() is roughly equivalent to css display: none except that jQuery stores data to be restored to it's initial value
       $errorMoreChar.hide();
       event.preventDefault();
       let strData = $(this).serialize();
