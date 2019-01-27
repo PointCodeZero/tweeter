@@ -112,7 +112,7 @@ form {
 }
 
 /*ERROR STYLES*/
-#errorNoChar {
+#error-no-char {
   background-color: #f2dede;
   border-color: #ebcccc;
   color: #a94442;
@@ -127,7 +127,7 @@ form {
   display: none;
 }
 
-#errorMoreChar {
+#error-more-char {
   background-color: #f2dede;
   border-color: #ebcccc;
   color: #a94442;

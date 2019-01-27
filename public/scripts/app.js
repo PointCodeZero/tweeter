@@ -88,7 +88,7 @@ function createTweetElement(db) {
           <p>${formatedDate}</p>
           <i class="fas fa-flag"><span"></span></i>
           <i class="fas fa-recycle"><span id="recycle"></span></i>
-          <i id="${db._id}"class="fas fa-heart"><span class="like">${db.likes}</span></i>
+          <i id="${db._id}" class="fas fa-heart"><span class="like">${db.likes}</span></i>
         </footer>
       </article>
   `);
@@ -114,8 +114,8 @@ function loadTweets() {
 //AJAX post new tweet
 function ajaxPOST() {
   const $form = $('.container form');
-  const $errorNoChar = $('#errorNoChar');
-  const $errorMoreChar = $('#errorMoreChar');
+  const $errorNoChar = $('#error-no-char');
+  const $errorMoreChar = $('#error-more-char');
     $form.on('submit', function(event) {
       $errorNoChar.hide(); // .hide() is roughly equivalent to css display: none except that jQuery stores data to be restored to it's initial value
       $errorMoreChar.hide();
